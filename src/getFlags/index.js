@@ -6,7 +6,13 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
+  const flagItems = [];
+  arr.map(el => {
+    if (el.hasOwnProperty('flags')) {
+      el.flags.map(item => flagItems.push(item));
+    }
+  });
+  return flagItems;
 };
 
 export default getFlags;
